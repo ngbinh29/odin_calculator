@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+    border: 0;
+    font-size: 32px;
+    border-radius: 10px;
+    background-color: #fcf9bf;
+    color: darkblue;
+    border-radius: 25px; 
+    border-bottom: 4px solid lighten(gray, 70%);
+    box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+    transition: all .3s;
+}
+
+button:hover {
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%)); 
+    transform: scale(1.03);
+}
+
+button:active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%)); 
+    transform: scale(.98);
+}
+
+.heading1 {
+    text-align: center;
+    font-size: 52px;
+    color: azure;
+    background-color: #317ac7;
+    font-weight: 600;
+}
+
+.screen {
+    min-height: 15vh;
+    text-align: right;
+    background-color: #3d5a80;
+    color: #7cf6fd;
+    border-radius: 10px;
+    border: 5px inset #354f52;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen .primary {
+    flex: 1;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.screen .secondary {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.container {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.keyboard {
+    flex: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+
+.basic, .advance {
+    background-color: #707070;
+}
+
+/* BASIC KEYBOARD */
+
+.basic {
+    flex: 1;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    padding: 8px;
+}
+
+.numpad {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.row, .notification, .numpad .btn {
+    flex: 1;
+}
+
+.numpad .row {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.numpad .row .btn {
+    flex: 1;
+}
+
+.operators {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.operators .row {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.operators .row .btn {
+    flex: 1;
+}
+
+.operators .row.two {
+    flex: 2.1;
+}
+
+#del, #clear {
+    color: orangered;
+}
+
+.notification {
+    background-color: cadetblue;
+    border: 1px solid #3d5a80;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.advance {
+    flex: 1;
+    border-right: 1px solid black;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+}
+
